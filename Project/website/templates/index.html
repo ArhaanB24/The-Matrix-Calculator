@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Mysite{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+  </head>
+  <body bgcolor="#39FF14" topmargin="130px">
+    <header></header>
+    <main>
+      <center>
+        <div>
+          <h1><span>The<br />Matrix<br /><u>Calculator</u></span></h1>
+        </div>
+        <div>
+          <h3>Enter user information</h3>
+          <form action="" method="post" autocomplete="off "> 
+            <label for="name"
+              ><input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter Your Name"
+                class="form nameform"
+                autocomplete="off"
+              /></label
+            ><br>
+            <button type="submit">Submit</button>
+            {% with messages = get_flashed_messages(with_categories=true)%}
+            {% if messages %}
+            {% for category, message in messages %}
+            {% if category == "error"%}
+            <div role="alert">{{ message }}</div>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+          </form>
+        </div>
+      </center>
+    </main>
+    <footer></footer>
+  </body>
+</html>

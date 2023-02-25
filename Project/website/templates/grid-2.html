@@ -1,0 +1,68 @@
+{% extends "matrix.html" %} {% block title %}Grid 2{% endblock %} {% block
+content %}
+<center>
+<link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+<form method="post" autocomplete="off">
+  <br>
+  <br>
+  <label for="A11">
+    <input type="text" name="A11" id="A11" placeholder="A11" size="3" class="form form1" autocomplete="off"/>
+  </label>
+  <label for="A12">
+    <input type="text" name="A12" id="A12" placeholder="A12" size="3" class="form form4" autocomplete="off"/>
+  </label>
+  <br />
+  <label for="A21">
+    <input type="text" name="A21" id="A21" placeholder="A21" size="3" class="form form2" autocomplete="off"/>
+  </label>
+  <label for="A22">
+    <input type="text" name="A22" id="A22" placeholder="A22" size="3" class="form form3" autocomplete="off"/>
+  </label>
+  <br />
+  <button type="submit">Submit</button>
+</form>
+<div><p>The Determinant is: {{ dets }}</p>
+  <div>
+    {% if dets == "0.00" %}
+    <p> {{ inv }} </p>
+    {% elif dets != "0.00" %}
+    <p><span>Inverse</span> Matrix is </p>
+    <table border = "3">
+    <p>1/{{ dets }}*</p>
+    {% for rows in inv %}
+    <tr>
+    {% for elements in rows %}
+    <td> {{ elements }} </td>
+    {% endfor %}
+    {% endfor %}
+    {% endif %}
+    </tr>
+  </table>
+  </div>
+  <div>
+    <p><span>Minor</span> Matrix is </p>
+    <table border = "3">
+      {% for rows in min %}
+      <tr>
+      {% for elements in rows %}
+      <td> {{ elements }} </td>
+      {% endfor %}
+      {% endfor %}
+      </tr>
+    </table>
+  </div>
+  <div>
+    <p><span>Cofactor</span> Matrix is </p>
+    <table border = "3">
+      {% for rows in cof %}
+      <tr>
+      {% for elements in rows %}
+      <td> {{ elements }} </td>
+      {% endfor %}
+      {% endfor %}
+      </tr>
+    </table>
+  </div>
+</center>
+{% endblock %}
+

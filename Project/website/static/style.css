@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@300;400&display=swap');
+body{
+    background-color: rgb(13, 53, 85);
+    font-family: "BioRhyme";
+    color:aliceblue;
+}
+input{
+    font: inherit;
+}
+h1 span{
+    color: #ffa700;
+    font-size: 2.5rem;
+}
+button {
+    background-color: #ffa700;
+    color: rgb(13, 53, 85);
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: #ffa700;
+    margin: 1.5rem;
+}
+
+div span{
+    color: #ffa700;
+}
+
+table {
+    border: 2px groove #ffa700;
+    border-radius: 5px;
+}
+
+table td{
+    border: 1px inset white;
+    color: lightblue;
+}
+.hand{
+    cursor: url(handfinal.png),pointer;
+}
+.sub{
+    cursor: url(handfinal.png),pointer;
+    border-radius: 50%;
+    padding: 1.5rem;
+    background-color: #E72B2A;
+    position: absolute;
+    font-family: "BioRhyme";
+    border: 3px solid rgb(13, 53, 85);
+}
+.sub:hover{
+    background-color: rgb(13, 53, 85);
+    color: #E72B2A;
+    border: 3px solid #E72B2A;
+}
+.sub1{
+    top: 20vh;
+    right: 50vw;
+}
+
+.sub2{
+    top: 20vh;
+}
+.bg{
+    background: linear-gradient(45deg,rgb(13, 53, 85),#E72B2A);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.txt{
+    font-size: 5vh;
+    color: antiquewhite;
+}
+.form{
+    background: transparent;
+    border: 0;
+    color: lightblue;
+    border-radius: 5px;
+    text-align: center;
+}
+.nameform{
+    border-bottom: 2px;
+    border-radius: 0;
+}
+.form1{
+    border-left: 2px solid whitesmoke;
+    border-top: 2px solid white;
+}
+.form2{
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.form3{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.form4{
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+}

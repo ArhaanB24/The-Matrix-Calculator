@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% block content %} 
+<html lang="en" class="bg hand">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Document{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
+  </head>
+  <body class="hand bg">
+    <center>
+      <main>
+        <div>
+          <form method="post">
+            <span class="txt">Choose dimensions of Matrix</span>
+            <br>
+            <button name = "grid" type="submit" class = "sub sub1" value="2x2">2x2</button>
+            <button name = "grid" type="submit" class = "sub sub2" value="3x3">3x3</button><br>
+          </form>
+        </div>
+      {% endblock %}
+      </main>
+    </center>
+  </body>
+</html>
