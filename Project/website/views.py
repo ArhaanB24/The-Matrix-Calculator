@@ -11,7 +11,7 @@ def home():
     data = request.form
     name = request.form.get("name")
     if request.method == "POST":
-        if len(name) < 4:
+        if len(name) < 3:
             flash("Name must be atleast 3 characters", category="error")
         else:
             return redirect("/matrix")
